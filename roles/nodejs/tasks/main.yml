@@ -1,0 +1,14 @@
+---
+# tasks file for nodejs
+
+- name: Enabling EPEL
+  shell: amazon-linux-extras install epel -y
+
+- name: Installing a node and npm 
+  yum:
+    name: "{{ item }}" 
+    enablerepo: epel 
+    state: installed
+  with_items:
+    - nodejs
+    - npm

@@ -12,19 +12,19 @@ from troposphere import (
     Ref,
     Template,
 )
-from troposphere.iam import {
+from troposphere.iam import (
     InstanceProfile,
     PolicyType as IAMPolicy,
     Role
-}
-from awacs.aws import {
+)
+from awacs.aws import (
     Action,
     Allow,
     Policy,
     Principal,
     Statement
-}
-from awacs.aws import AssumeRole
+)
+from awacs.sts import AssumeRole
 
 getter = IPGetter()
 
